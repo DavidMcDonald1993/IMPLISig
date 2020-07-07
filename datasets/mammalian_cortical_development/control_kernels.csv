@@ -1,0 +1,11 @@
+,kernel_1,kernel_2,kernel_3,kernel_4,kernel_5,kernel_6
+Coup_g,False,False,False,False,False,False
+Coup_p,False,False,False,False,False,False
+Emx2_g,False,True,False,False,False,False
+Emx2_p,False,False,False,False,True,False
+Fgf8_g,True,False,False,False,False,False
+Fgf8_p,False,False,False,True,False,False
+Pax6_g,False,False,False,False,False,False
+Pax6_p,False,False,False,False,False,False
+Sp8_g,False,False,True,False,False,False
+Sp8_p,False,False,False,False,False,True

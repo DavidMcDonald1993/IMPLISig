@@ -1,0 +1,2131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1901.0"
+   height="863.0"
+   version="1.1"
+   id="svg543"
+   sodipodi:docname="original_network.svg"
+   inkscape:export-filename="/home/david/Documents/hierarchical_decomposition/datasets/gastric/original_network.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.5 (0.92.5+68)">
+  <metadata
+     id="metadata547">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1863"
+     inkscape:window-height="1056"
+     id="namedview545"
+     showgrid="false"
+     inkscape:zoom="0.87188758"
+     inkscape:cx="959.09425"
+     inkscape:cy="246.96197"
+     inkscape:window-x="57"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg543" />
+  <style
+     type="text/css"
+     id="style2">
+text {
+  font-family: 'SansSerif';
+  font-size: 12px;
+}
+.node .shape {
+fill: #ffffff;
+stroke: #000000;
+}
+.node text {
+fill: #000000;
+}
+.node_node_style .shape {
+fill: #cccccc;
+stroke: #000000;
+}
+.node_node_style text {
+fill: #000000;
+}
+.node_node_style_2 .shape {
+fill: #ffcc66;
+stroke: #000000;
+}
+.node_node_style_2 text {
+fill: #000000;
+}
+.node_node_style_3 .shape {
+fill: #ffcccc;
+stroke: #000000;
+}
+.node_node_style_3 text {
+fill: #000000;
+}
+.node_node_style_4 .shape {
+fill: #cccccc;
+stroke: #000000;
+}
+.node_node_style_4 text {
+fill: #000000;
+}
+.node_node_style_5 .shape {
+fill: #ccffcc;
+stroke: #000000;
+}
+.node_node_style_5 text {
+fill: #000000;
+}
+.edge {
+stroke: #000000;
+fill: none;
+stroke-width: 1;
+}
+.edge_POSITIVE {
+stroke: #00c800;
+}
+.edge_NEGATIVE {
+stroke: #c80000;
+}
+.edge_DUAL {
+stroke: #0000c8;
+}
+.edge_edge_style {
+stroke: #00c800;
+fill: none;
+stroke-width: 2;
+}
+.edge_edge_style_2 {
+stroke: #c80000;
+fill: none;
+stroke-width: 2;
+}
+</style>
+  <defs
+     id="defs7">
+    <marker
+       id="Marker_POSITIVE_00c800"
+       viewBox="-7 -7 12 15"
+       orient="auto"
+       markerHeight="9"
+       markerWidth="9">
+      <path
+         stroke="#00c800"
+         fill="#00c800"
+         d="M -4 -5 L -2 0 L -4 5 L 2 0 z"
+         id="path4" />
+    </marker>
+  </defs>
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1155.0 460.0 L 1155.0 380.0 L 1155.0 350.0"
+     id="path9" />
+  <defs
+     id="defs14">
+    <marker
+       id="Marker_NEGATIVE_c80000"
+       viewBox="-7 -7 12 15"
+       orient="auto"
+       markerHeight="9"
+       markerWidth="9">
+      <path
+         stroke="#c80000"
+         fill="#c80000"
+         d="M -1 -4 L -1 4 L 1 4 L 1 -4 z"
+         id="path11" />
+    </marker>
+  </defs>
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1092.0 480.0 L 895.0 480.0 L 895.0 399.0"
+     id="path16" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 83.0 347.0 L 83.0 409.0"
+     id="path18" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 125.0 335.0 L 398.0 335.0 L 398.0 386.0"
+     id="path20" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 83.0 200.0 L 83.0 310.0"
+     id="path22" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1845.0 698.0 L 1861.0 698.0 L 1861.0 592.0"
+     id="path24" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1761.0 699.0 L 1719.0 699.0 L 1663.0 699.0"
+     id="path26" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1800.0 714.0 L 1800.0 794.0 L 1800.0 823.0"
+     id="path28" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1140.0 257.0 L 1140.0 354.0 L 1136.0 354.0"
+     id="path30" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 844.0 539.0 L 894.0 539.0 L 912.0 539.0"
+     id="path32" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1001.0 277.0 L 938.0 277.0 L 938.0 523.0"
+     id="path34" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1039.0 263.0 L 1039.0 250.0 L 1096.0 250.0"
+     id="path36" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1085.0 274.0 L 1165.0 274.0 L 1236.0 274.0"
+     id="path38" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1085.0 263.0 L 1418.0 262.0 L 1418.0 382.0"
+     id="path40" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1688.0 244.0 L 1592.0 244.0 L 1592.0 413.0"
+     id="path42" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1731.0 228.0 L 1731.0 77.0 L 1491.0 77.0"
+     id="path44" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1391.0 398.0 L 1332.0 398.0 L 1332.0 335.0"
+     id="path46" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1475.0 401.0 L 1824.0 401.0 L 1824.0 485.0"
+     id="path48" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1424.0 419.0 L 1424.0 521.0 L 1312.0 521.0"
+     id="path50" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 706.0 775.0 L 706.0 791.0 L 851.0 791.0"
+     id="path52" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 992.0 419.0 L 992.0 418.0 L 992.0 402.0"
+     id="path54" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 951.0 432.0 L 664.0 432.0 L 664.0 343.0"
+     id="path56" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 964.0 453.0 L 964.0 467.0 L 831.0 467.0"
+     id="path58" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 951.0 422.0 L 911.0 422.0 L 911.0 399.0"
+     id="path60" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 951.0 427.0 L 768.0 427.0 L 768.0 292.0"
+     id="path62" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 964.0 419.0 L 964.0 240.0 L 1096.0 240.0"
+     id="path64" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 951.0 442.0 L 834.0 442.0 L 590.0 442.0"
+     id="path66" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1035.0 451.0 L 1309.0 451.0 L 1309.0 461.0"
+     id="path68" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1035.0 442.0 L 1361.0 442.0 L 1530.0 442.0"
+     id="path70" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1011.0 453.0 L 1011.0 510.0 L 1222.0 510.0"
+     id="path72" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1035.0 446.0 L 1404.0 446.0 L 1404.0 422.0"
+     id="path74" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1044.0 732.0 L 1044.0 767.0 L 1044.0 773.0"
+     id="path76" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 888.0 341.0 L 888.0 350.0 L 888.0 359.0"
+     id="path78" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 924.0 321.0 L 1094.0 321.0 L 1094.0 336.0"
+     id="path80" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 134.0 249.0 L 109.0 249.0 L 109.0 310.0"
+     id="path82" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1311.0 332.0 L 1311.0 420.0 L 1300.0 420.0"
+     id="path84" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1334.0 298.0 L 1334.0 201.0 L 707.0 201.0"
+     id="path86" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 978.0 672.0 L 979.0 672.0 L 1000.0 672.0"
+     id="path88" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1472.0 313.0 L 1373.0 314.0"
+     id="path90" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1225.0 503.0 L 1133.0 503.0 L 1133.0 497.0"
+     id="path92" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1258.0 498.0 L 1258.0 402.0 L 1258.0 305.0"
+     id="path94" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 193.0 319.0 L 193.0 423.0 L 128.0 423.0"
+     id="path96" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 828.0 475.0 L 981.0 475.0 L 981.0 456.0"
+     id="path98" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 744.0 462.0 L 613.0 462.0 L 613.0 159.0"
+     id="path100" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1183.0 313.0 L 1183.0 299.0 L 1088.0 298.0"
+     id="path102" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1147.0 329.0 L 1020.0 329.0 L 1020.0 362.0"
+     id="path104" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1805.0 522.0 L 1805.0 592.0 L 1686.0 592.0"
+     id="path106" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1213.0 425.0 L 1208.0 425.0 L 1208.0 545.0"
+     id="path108" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1238.0 409.0 L 1238.0 285.0 L 1088.0 285.0"
+     id="path110" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1297.0 429.0 L 1318.0 429.0 L 1318.0 461.0"
+     id="path112" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1735.0 624.0 L 1587.0 624.0 L 1587.0 557.0"
+     id="path114" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1755.0 641.0 L 1755.0 706.0 L 1755.0 745.0"
+     id="path116" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1799.0 641.0 L 1799.0 656.0 L 1799.0 677.0"
+     id="path118" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1745.0 641.0 L 1745.0 689.0 L 1663.0 689.0"
+     id="path120" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 410.0 389.0 L 410.0 281.0 L 410.0 169.0"
+     id="path122" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 389.0 394.0 L 317.0 394.0 L 288.0 394.0"
+     id="path124" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 473.0 402.0 L 594.0 402.0 L 594.0 159.0"
+     id="path126" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 448.0 423.0 L 448.0 442.0 L 500.0 442.0"
+     id="path128" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 428.0 389.0 L 428.0 108.0 L 1575.0 108.0 L 1575.0 413.0"
+     id="path130" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 417.0 423.0 L 417.0 639.0 L 286.0 639.0"
+     id="path132" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 429.0 423.0 L 429.0 610.0 L 890.0 610.0"
+     id="path134" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 473.0 406.0 L 1143.0 406.0 L 1388.0 406.0"
+     id="path136" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1860.0 555.0 L 1860.0 447.0 L 1860.0 266.0"
+     id="path138" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1092.0 793.0 L 1136.0 793.0 L 1136.0 819.0"
+     id="path140" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1480.0 633.0 L 1531.0 633.0 L 1732.0 633.0"
+     id="path142" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1421.0 649.0 L 1421.0 661.0 L 1421.0 681.0"
+     id="path144" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 702.0 320.0 L 755.0 320.0 L 837.0 320.0"
+     id="path146" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1775.0 445.0 L 1775.0 456.0 L 1775.0 485.0"
+     id="path148" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 635.0 156.0 L 635.0 170.0 L 635.0 182.0"
+     id="path150" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 379.0 577.0 L 476.0 577.0 L 562.0 577.0"
+     id="path152" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 320.0 558.0 L 320.0 230.0 L 1096.0 230.0"
+     id="path154" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 359.0 558.0 L 359.0 520.0 L 1222.0 520.0"
+     id="path156" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 341.0 558.0 L 341.0 482.0 L 567.0 482.0"
+     id="path158" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1262.0 669.0 L 1236.0 669.0 L 1196.0 669.0"
+     id="path160" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 78.0 446.0 L 78.0 755.0 L 312.0 755.0"
+     id="path162" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 41.0 428.0 L 25.0 428.0 L 25.0 52.0 L 1561.0 52.0 L 1561.0 413.0"
+     id="path164" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1595.0 131.0 L 1060.0 131.0 L 657.0 131.0"
+     id="path166" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1539.0 649.0 L 1539.0 458.0 L 1539.0 453.0"
+     id="path168" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 458.0 282.0 L 443.0 282.0 L 443.0 386.0"
+     id="path170" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 854.0 379.0 L 817.0 379.0 L 817.0 454.0"
+     id="path172" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 135.0 82.0 L 84.0 82.0 L 84.0 163.0"
+     id="path174" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 174.0 99.0 L 174.0 132.0 L 174.0 231.0"
+     id="path176" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1213.0 548.0 L 1213.0 530.0 L 1222.0 530.0"
+     id="path178" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1253.0 566.0 L 1478.0 566.0 L 1478.0 491.0"
+     id="path180" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1194.0 582.0 L 1194.0 584.0 L 1098.0 584.0"
+     id="path182" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1204.0 582.0 L 1204.0 639.0 L 498.0 640.0 L 498.0 377.0"
+     id="path184" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1169.0 571.0 L 881.0 571.0 L 881.0 399.0"
+     id="path186" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1253.0 573.0 L 1296.0 573.0 L 1296.0 650.0"
+     id="path188" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1220.0 582.0 L 1220.0 696.0 L 1358.0 696.0"
+     id="path190" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1169.0 555.0 L 1018.0 555.0 L 1002.0 555.0"
+     id="path192" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1253.0 559.0 L 1432.0 559.0 L 1432.0 422.0"
+     id="path194" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1212.0 582.0 L 1212.0 759.0 L 748.0 759.0"
+     id="path196" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1640.0 574.0 L 1639.0 341.0"
+     id="path198" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1641.0 608.0 L 1641.0 617.0 L 1732.0 617.0"
+     id="path200" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1638.0 304.0 L 1638.0 172.0 L 1638.0 161.0"
+     id="path202" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1741.0 782.0 L 1741.0 794.0 L 1741.0 823.0"
+     id="path204" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 933.0 560.0 L 933.0 560.0 L 933.0 593.0"
+     id="path206" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 662.0 293.0 L 662.0 298.0 L 662.0 303.0"
+     id="path208" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 703.0 275.0 L 720.0 275.0 L 724.0 275.0"
+     id="path210" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 500.0 340.0 L 500.0 302.0"
+     id="path212" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 237.0 623.0 L 237.0 407.0 L 386.0 407.0"
+     id="path214" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 199.0 639.0 L 88.0 639.0 L 88.0 449.0"
+     id="path216" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1378.0 684.0 L 1378.0 172.0 L 984.0 172.0"
+     id="path218" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1361.0 708.0 L 1181.0 708.0 L 1181.0 819.0"
+     id="path220" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 337.0 153.0 L 333.0 153.0 L 333.0 188.0"
+     id="path222" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 935.0 630.0 L 935.0 648.0"
+     id="path224" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 893.0 616.0 L 335.0 616.0 L 335.0 595.0"
+     id="path226" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 893.0 603.0 L 798.0 603.0 L 798.0 558.0"
+     id="path228" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 659.0 219.0 L 659.0 243.0 L 659.0 256.0"
+     id="path230" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1733.0 481.0 L 1733.0 495.0 L 1759.0 495.0"
+     id="path232" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1814.0 245.0 L 1775.0 245.0"
+     id="path234" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 545.0 461.0 L 545.0 565.0 L 562.0 565.0"
+     id="path236" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 503.0 450.0 L 250.0 450.0 L 250.0 620.0"
+     id="path238" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1548.0 539.0 L 1526.0 539.0 L 1526.0 333.0"
+     id="path240" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 654.0 480.0 L 740.0 480.0 L 741.0 480.0"
+     id="path242" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1109.0 668.0 L 1104.0 668.0 L 1090.0 668.0"
+     id="path244" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1576.0 696.0 L 1539.0 696.0 L 1539.0 686.0"
+     id="path246" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1280.0 302.0 L 1280.0 388.0 L 1202.0 388.0 L 1202.0 545.0"
+     id="path248" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1278.0 268.0 L 1278.0 87.0 L 222.0 87.0"
+     id="path250" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1533.0 435.0 L 1443.0 435.0 L 1443.0 422.0"
+     id="path252" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1617.0 432.0 L 1675.0 432.0 L 1703.0 432.0"
+     id="path254" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1585.0 450.0 L 1585.0 459.0 L 1678.0 459.0"
+     id="path256" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1446.0 96.0 L 1446.0 302.0 L 1446.0 382.0"
+     id="path258" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1404.0 78.0 L 225.0 78.0 L 222.0 78.0"
+     id="path260" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 640.0 559.0 L 640.0 541.0 L 757.0 541.0"
+     id="path262" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 938.0 790.0 L 1005.0 791.0"
+     id="path264" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 941.0 158.0 L 941.0 141.0 L 657.0 141.0"
+     id="path266" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1007.0 399.0 L 1007.0 415.0 L 1007.0 416.0"
+     id="path268" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 222.0 366.0 L 222.0 349.0 L 222.0 322.0"
+     id="path270" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 201.0 388.0 L 117.0 388.0 L 117.0 350.0"
+     id="path272" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 360.0 214.0 L 512.0 214.0 L 512.0 262.0"
+     id="path274" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 276.0 209.0 L 96.0 209.0 L 96.0 310.0"
+     id="path276" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 276.0 221.0 L 225.0 221.0 L 225.0 282.0"
+     id="path278" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 331.0 225.0 L 331.0 379.0 L 331.0 555.0"
+     id="path280" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 293.0 225.0 L 293.0 738.0 L 1457.0 738.0 L 1457.0 652.0"
+     id="path282" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 811.0 271.0 L 817.0 271.0 L 836.0 271.0"
+     id="path284" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 783.0 289.0 L 783.0 351.0 L 1046.0 351.0"
+     id="path286" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1046.0 688.0 L 1046.0 695.0"
+     id="path288" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 399.0 757.0 L 658.0 757.0"
+     id="path290" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 885.0 290.0 L 885.0 300.0 L 885.0 304.0"
+     id="path292" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1475.0 454.0 L 1475.0 338.0 L 1234.0 338.0"
+     id="path294" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1133.0 370.0 L 1247.0 370.0 L 1247.0 406.0"
+     id="path296" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1011.0 585.0 L 853.0 585.0 L 652.0 585.0"
+     id="path298" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1095.0 592.0 L 1413.0 592.0 L 1596.0 592.0"
+     id="path300" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1281.0 484.0 L 1266.0 484.0 L 1266.0 495.0"
+     id="path302" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1319.0 498.0 L 1319.0 636.0 L 1319.0 650.0"
+     id="path304" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1326.0 464.0 L 1326.0 344.0 L 1234.0 344.0"
+     id="path306" />
+  <path
+     class="edge edge_POSITIVE edge_edge_style"
+     marker-end="url(#Marker_POSITIVE_00c800)"
+     d="M 1365.0 495.0 L 1713.0 495.0 L 1713.0 745.0"
+     id="path308" />
+  <path
+     class="edge edge_NEGATIVE edge_edge_style_2"
+     marker-end="url(#Marker_NEGATIVE_c80000)"
+     d="M 1365.0 486.0 L 1416.0 486.0 L 1416.0 422.0"
+     id="path310" />
+  <g
+     id="RTPK"
+     class="node node_node_style">
+    <ellipse
+       id="RTPK_shape"
+       class="shape"
+       cx="612.0"
+       cy="139.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="RTPK_text"
+       x="612"
+       y="142"
+       text-anchor="middle">RTPK</text>
+  </g>
+  <g
+     id="SHC1"
+     class="node node_node_style">
+    <ellipse
+       id="SHC1_shape"
+       class="shape"
+       cx="662.0"
+       cy="202.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="SHC1_text"
+       x="662"
+       y="205"
+       text-anchor="middle">SHC1</text>
+  </g>
+  <g
+     id="GRB2"
+     class="node node_node_style">
+    <ellipse
+       id="GRB2_shape"
+       class="shape"
+       cx="661.0"
+       cy="276.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="GRB2_text"
+       x="661"
+       y="279"
+       text-anchor="middle">GRB2</text>
+  </g>
+  <g
+     id="SOS"
+     class="node node_node_style">
+    <ellipse
+       id="SOS_shape"
+       class="shape"
+       cx="660.0"
+       cy="323.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="SOS_text"
+       x="660"
+       y="326"
+       text-anchor="middle">SOS</text>
+  </g>
+  <g
+     id="Ras"
+     class="node node_node_style">
+    <ellipse
+       id="Ras_shape"
+       class="shape"
+       cx="882.0"
+       cy="324.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Ras_text"
+       x="882"
+       y="327"
+       text-anchor="middle">Ras</text>
+  </g>
+  <g
+     id="Raf"
+     class="node node_node_style">
+    <ellipse
+       id="Raf_shape"
+       class="shape"
+       cx="896.0"
+       cy="379.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Raf_text"
+       x="896"
+       y="382"
+       text-anchor="middle">Raf</text>
+  </g>
+  <g
+     id="MEK"
+     class="node node_node_style_2">
+    <ellipse
+       id="MEK_shape"
+       class="shape"
+       cx="786.0"
+       cy="474.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MEK_text"
+       x="786"
+       y="477"
+       text-anchor="middle">MEK</text>
+  </g>
+  <g
+     id="ERK"
+     class="node node_node_style">
+    <ellipse
+       id="ERK_shape"
+       class="shape"
+       cx="993.0"
+       cy="436.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="ERK_text"
+       x="993"
+       y="439"
+       text-anchor="middle">ERK</text>
+  </g>
+  <g
+     id="DUSP6"
+     class="node node_node_style">
+    <ellipse
+       id="DUSP6_shape"
+       class="shape"
+       cx="1020.0"
+       cy="382.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="DUSP6_text"
+       x="1020"
+       y="385"
+       text-anchor="middle">DUSP6</text>
+  </g>
+  <g
+     id="TAK1"
+     class="node node_node_style_2">
+    <ellipse
+       id="TAK1_shape"
+       class="shape"
+       cx="318.0"
+       cy="208.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="TAK1_text"
+       x="318"
+       y="211"
+       text-anchor="middle">TAK1</text>
+  </g>
+  <g
+     id="MKK3"
+     class="node node_node_style">
+    <ellipse
+       id="MKK3_shape"
+       class="shape"
+       cx="500.0"
+       cy="282.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MKK3_text"
+       x="500"
+       y="285"
+       text-anchor="middle">MKK3</text>
+  </g>
+  <g
+     id="ASK1"
+     class="node node_node_style">
+    <ellipse
+       id="ASK1_shape"
+       class="shape"
+       cx="500.0"
+       cy="357.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="ASK1_text"
+       x="500"
+       y="360"
+       text-anchor="middle">ASK1</text>
+  </g>
+  <g
+     id="TAB"
+     class="node node_node_style">
+    <ellipse
+       id="TAB_shape"
+       class="shape"
+       cx="379.0"
+       cy="149.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="TAB_text"
+       x="379"
+       y="152"
+       text-anchor="middle">TAB</text>
+  </g>
+  <g
+     id="p38alpha"
+     class="node node_node_style_2">
+    <ellipse
+       id="p38alpha_shape"
+       class="shape"
+       cx="431.0"
+       cy="406.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="p38alpha_text"
+       x="431"
+       y="409"
+       text-anchor="middle">p38alpha</text>
+  </g>
+  <g
+     id="DUSP1"
+     class="node node_node_style">
+    <ellipse
+       id="DUSP1_shape"
+       class="shape"
+       cx="241.0"
+       cy="640.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="DUSP1_text"
+       x="241"
+       y="643"
+       text-anchor="middle">DUSP1</text>
+  </g>
+  <g
+     id="MKK4"
+     class="node node_node_style">
+    <ellipse
+       id="MKK4_shape"
+       class="shape"
+       cx="83.0"
+       cy="330.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MKK4_text"
+       x="83"
+       y="333"
+       text-anchor="middle">MKK4</text>
+  </g>
+  <g
+     id="MKK7"
+     class="node node_node_style">
+    <ellipse
+       id="MKK7_shape"
+       class="shape"
+       cx="202.0"
+       cy="302.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MKK7_text"
+       x="202"
+       y="305"
+       text-anchor="middle">MKK7</text>
+  </g>
+  <g
+     id="MEKK4"
+     class="node node_node_style">
+    <ellipse
+       id="MEKK4_shape"
+       class="shape"
+       cx="84.0"
+       cy="183.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MEKK4_text"
+       x="84"
+       y="186"
+       text-anchor="middle">MEKK4</text>
+  </g>
+  <g
+     id="MLK3"
+     class="node node_node_style">
+    <ellipse
+       id="MLK3_shape"
+       class="shape"
+       cx="176.0"
+       cy="251.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MLK3_text"
+       x="176"
+       y="254"
+       text-anchor="middle">MLK3</text>
+  </g>
+  <g
+     id="Rac"
+     class="node node_node_style">
+    <ellipse
+       id="Rac_shape"
+       class="shape"
+       cx="177.0"
+       cy="82.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Rac_text"
+       x="177"
+       y="85"
+       text-anchor="middle">Rac</text>
+  </g>
+  <g
+     id="JNK"
+     class="node node_node_style">
+    <ellipse
+       id="JNK_shape"
+       class="shape"
+       cx="83.0"
+       cy="429.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="JNK_text"
+       x="83"
+       y="432"
+       text-anchor="middle">JNK</text>
+  </g>
+  <g
+     id="GRAP2"
+     class="node node_node_style">
+    <ellipse
+       id="GRAP2_shape"
+       class="shape"
+       cx="243.0"
+       cy="383.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="GRAP2_text"
+       x="243"
+       y="386"
+       text-anchor="middle">GRAP2</text>
+  </g>
+  <g
+     id="SHP2"
+     class="node node_node_style">
+    <ellipse
+       id="SHP2_shape"
+       class="shape"
+       cx="881.0"
+       cy="273.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="SHP2_text"
+       x="881"
+       y="276"
+       text-anchor="middle">SHP2</text>
+  </g>
+  <g
+     id="GAB"
+     class="node node_node_style">
+    <ellipse
+       id="GAB_shape"
+       class="shape"
+       cx="769.0"
+       cy="272.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="GAB_text"
+       x="769"
+       y="275"
+       text-anchor="middle">GAB</text>
+  </g>
+  <g
+     id="IKKB"
+     class="node node_node_style">
+    <ellipse
+       id="IKKB_shape"
+       class="shape"
+       cx="337.0"
+       cy="575.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="IKKB_text"
+       x="337"
+       y="578"
+       text-anchor="middle">IKKB</text>
+  </g>
+  <g
+     id="IKKA"
+     class="node node_node_style">
+    <ellipse
+       id="IKKA_shape"
+       class="shape"
+       cx="1053.0"
+       cy="594.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="IKKA_text"
+       x="1053"
+       y="597"
+       text-anchor="middle">IKKA</text>
+  </g>
+  <g
+     id="AKT"
+     class="node node_node_style_2">
+    <ellipse
+       id="AKT_shape"
+       class="shape"
+       cx="1211.0"
+       cy="565.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="AKT_text"
+       x="1211"
+       y="568"
+       text-anchor="middle">AKT</text>
+  </g>
+  <g
+     id="IRS1"
+     class="node node_node_style">
+    <ellipse
+       id="IRS1_shape"
+       class="shape"
+       cx="1141.0"
+       cy="240.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="IRS1_text"
+       x="1141"
+       y="243"
+       text-anchor="middle">IRS1</text>
+  </g>
+  <g
+     id="Caspase8"
+     class="node node_node_style">
+    <ellipse
+       id="Caspase8_shape"
+       class="shape"
+       cx="896.0"
+       cy="790.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Caspase8_text"
+       x="896"
+       y="793"
+       text-anchor="middle">Caspase8</text>
+  </g>
+  <g
+     id="PTENgene"
+     class="node node_node_style">
+    <ellipse
+       id="PTENgene_shape"
+       class="shape"
+       cx="1514.0"
+       cy="313.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="PTENgene_text"
+       x="1514"
+       y="316"
+       text-anchor="middle">PTENgene</text>
+  </g>
+  <g
+     id="Caspase9"
+     class="node node_node_style">
+    <ellipse
+       id="Caspase9_shape"
+       class="shape"
+       cx="1048.0"
+       cy="715.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Caspase9_text"
+       x="1048"
+       y="718"
+       text-anchor="middle">Caspase9</text>
+  </g>
+  <g
+     id="FOXO"
+     class="node node_node_style">
+    <ellipse
+       id="FOXO_shape"
+       class="shape"
+       cx="1403.0"
+       cy="701.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="FOXO_text"
+       x="1403"
+       y="704"
+       text-anchor="middle">FOXO</text>
+  </g>
+  <g
+     id="TSC"
+     class="node node_node_style">
+    <ellipse
+       id="TSC_shape"
+       class="shape"
+       cx="1267.0"
+       cy="515.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="TSC_text"
+       x="1267"
+       y="518"
+       text-anchor="middle">TSC</text>
+  </g>
+  <g
+     id="pras40"
+     class="node node_node_style">
+    <ellipse
+       id="pras40_shape"
+       class="shape"
+       cx="1480.0"
+       cy="471.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="pras40_text"
+       x="1480"
+       y="474"
+       text-anchor="middle">pras40</text>
+  </g>
+  <g
+     id="BCL2"
+     class="node node_node_style">
+    <ellipse
+       id="BCL2_shape"
+       class="shape"
+       cx="1151.0"
+       cy="670.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="BCL2_text"
+       x="1151"
+       y="673"
+       text-anchor="middle">BCL2</text>
+  </g>
+  <g
+     id="p53"
+     class="node node_node_style">
+    <ellipse
+       id="p53_shape"
+       class="shape"
+       cx="935.0"
+       cy="613.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="p53_text"
+       x="935"
+       y="616"
+       text-anchor="middle">p53</text>
+  </g>
+  <g
+     id="Rheb"
+     class="node node_node_style">
+    <ellipse
+       id="Rheb_shape"
+       class="shape"
+       cx="1134.0"
+       cy="477.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Rheb_text"
+       x="1134"
+       y="480"
+       text-anchor="middle">Rheb</text>
+  </g>
+  <g
+     id="mTORC1"
+     class="node node_node_style">
+    <ellipse
+       id="mTORC1_shape"
+       class="shape"
+       cx="1189.0"
+       cy="330.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="mTORC1_text"
+       x="1189"
+       y="333"
+       text-anchor="middle">mTORC1</text>
+  </g>
+  <g
+     id="PTEN"
+     class="node node_node_style">
+    <ellipse
+       id="PTEN_shape"
+       class="shape"
+       cx="1328.0"
+       cy="315.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="PTEN_text"
+       x="1328"
+       y="318"
+       text-anchor="middle">PTEN</text>
+  </g>
+  <g
+     id="BAD"
+     class="node node_node_style">
+    <ellipse
+       id="BAD_shape"
+       class="shape"
+       cx="1304.0"
+       cy="670.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="BAD_text"
+       x="1304"
+       y="673"
+       text-anchor="middle">BAD</text>
+  </g>
+  <g
+     id="mTORC2"
+     class="node node_node_style">
+    <ellipse
+       id="mTORC2_shape"
+       class="shape"
+       cx="1281.0"
+       cy="285.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="mTORC2_text"
+       x="1281"
+       y="288"
+       text-anchor="middle">mTORC2</text>
+  </g>
+  <g
+     id="MDM2gene"
+     class="node node_node_style">
+    <ellipse
+       id="MDM2gene_shape"
+       class="shape"
+       cx="802.0"
+       cy="538.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MDM2gene_text"
+       x="802"
+       y="541"
+       text-anchor="middle">MDM2gene</text>
+  </g>
+  <g
+     id="S6K"
+     class="node node_node_style">
+    <ellipse
+       id="S6K_shape"
+       class="shape"
+       cx="1043.0"
+       cy="280.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="S6K_text"
+       x="1043"
+       y="283"
+       text-anchor="middle">S6K</text>
+  </g>
+  <g
+     id="MDM2"
+     class="node node_node_style">
+    <ellipse
+       id="MDM2_shape"
+       class="shape"
+       cx="957.0"
+       cy="543.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MDM2_text"
+       x="957"
+       y="546"
+       text-anchor="middle">MDM2</text>
+  </g>
+  <g
+     id="CytochromeC"
+     class="node node_node_style">
+    <ellipse
+       id="CytochromeC_shape"
+       class="shape"
+       cx="1045.0"
+       cy="671.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="CytochromeC_text"
+       x="1045"
+       y="674"
+       text-anchor="middle">CytochromeC</text>
+  </g>
+  <g
+     id="BAX"
+     class="node node_node_style">
+    <ellipse
+       id="BAX_shape"
+       class="shape"
+       cx="936.0"
+       cy="668.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="BAX_text"
+       x="936"
+       y="671"
+       text-anchor="middle">BAX</text>
+  </g>
+  <g
+     id="NFkB"
+     class="node node_node_style">
+    <ellipse
+       id="NFkB_shape"
+       class="shape"
+       cx="607.0"
+       cy="576.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="NFkB_text"
+       x="607"
+       y="579"
+       text-anchor="middle">NFkB</text>
+  </g>
+  <g
+     id="MAP3K8"
+     class="node node_node_style">
+    <ellipse
+       id="MAP3K8_shape"
+       class="shape"
+       cx="612.0"
+       cy="482.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MAP3K8_text"
+       x="612"
+       y="485"
+       text-anchor="middle">MAP3K8</text>
+  </g>
+  <g
+     id="PI3K"
+     class="node node_node_style_2">
+    <ellipse
+       id="PI3K_shape"
+       class="shape"
+       cx="1091.0"
+       cy="356.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="PI3K_text"
+       x="1091"
+       y="359"
+       text-anchor="middle">PI3K</text>
+  </g>
+  <g
+     id="PDK1"
+     class="node node_node_style">
+    <ellipse
+       id="PDK1_shape"
+       class="shape"
+       cx="1255.0"
+       cy="426.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="PDK1_text"
+       x="1255"
+       y="429"
+       text-anchor="middle">PDK1</text>
+  </g>
+  <g
+     id="LRP"
+     class="node node_node_style">
+    <ellipse
+       id="LRP_shape"
+       class="shape"
+       cx="1575.0"
+       cy="433.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="LRP_text"
+       x="1575"
+       y="436"
+       text-anchor="middle">LRP</text>
+  </g>
+  <g
+     id="ITCH"
+     class="node node_node_style">
+    <ellipse
+       id="ITCH_shape"
+       class="shape"
+       cx="357.0"
+       cy="757.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="ITCH_text"
+       x="357"
+       y="760"
+       text-anchor="middle">ITCH</text>
+  </g>
+  <g
+     id="DKK1"
+     class="node node_node_style">
+    <ellipse
+       id="DKK1_shape"
+       class="shape"
+       cx="1541.0"
+       cy="666.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="DKK1_text"
+       x="1541"
+       y="669"
+       text-anchor="middle">DKK1</text>
+  </g>
+  <g
+     id="Fz"
+     class="node node_node_style">
+    <ellipse
+       id="Fz_shape"
+       class="shape"
+       cx="1730.0"
+       cy="245.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Fz_text"
+       x="1730"
+       y="248"
+       text-anchor="middle">Fz</text>
+  </g>
+  <g
+     id="Antisurvival"
+     class="node node_node_style_3">
+    <rect
+       id="Antisurvival_shape"
+       class="shape"
+       width="80"
+       height="30"
+       x="1120"
+       y="824" />
+    <text
+       id="Antisurvival_text"
+       x="1160"
+       y="842"
+       text-anchor="middle">Antisurvival</text>
+  </g>
+  <g
+     id="Axin"
+     class="node node_node_style">
+    <ellipse
+       id="Axin_shape"
+       class="shape"
+       cx="1748.0"
+       cy="428.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Axin_text"
+       x="1748"
+       y="431"
+       text-anchor="middle">Axin</text>
+  </g>
+  <g
+     id="GSK3"
+     class="node node_node_style_2">
+    <ellipse
+       id="GSK3_shape"
+       class="shape"
+       cx="1433.0"
+       cy="402.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="GSK3_text"
+       x="1433"
+       y="405"
+       text-anchor="middle">GSK3</text>
+  </g>
+  <g
+     id="RTPKgene"
+     class="node node_node_style">
+    <ellipse
+       id="RTPKgene_shape"
+       class="shape"
+       cx="939.0"
+       cy="175.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="RTPKgene_text"
+       x="939"
+       y="178"
+       text-anchor="middle">RTPKgene</text>
+  </g>
+  <g
+     id="RSK"
+     class="node node_node_style">
+    <ellipse
+       id="RSK_shape"
+       class="shape"
+       cx="1323.0"
+       cy="481.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="RSK_text"
+       x="1323"
+       y="484"
+       text-anchor="middle">RSK</text>
+  </g>
+  <g
+     id="MSK"
+     class="node node_node_style">
+    <ellipse
+       id="MSK_shape"
+       class="shape"
+       cx="545.0"
+       cy="444.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MSK_text"
+       x="545"
+       y="447"
+       text-anchor="middle">MSK</text>
+  </g>
+  <g
+     id="CFLAR"
+     class="node node_node_style">
+    <ellipse
+       id="CFLAR_shape"
+       class="shape"
+       cx="703.0"
+       cy="758.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="CFLAR_text"
+       x="703"
+       y="761"
+       text-anchor="middle">CFLAR</text>
+  </g>
+  <g
+     id="CK1"
+     class="node node_node_style">
+    <ellipse
+       id="CK1_shape"
+       class="shape"
+       cx="1723.0"
+       cy="464.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="CK1_text"
+       x="1723"
+       y="467"
+       text-anchor="middle">CK1</text>
+  </g>
+  <g
+     id="Dvl"
+     class="node node_node_style">
+    <ellipse
+       id="Dvl_shape"
+       class="shape"
+       cx="1446.0"
+       cy="79.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Dvl_text"
+       x="1446"
+       y="82"
+       text-anchor="middle">Dvl</text>
+  </g>
+  <g
+     id="SFRP1"
+     class="node node_node_style">
+    <ellipse
+       id="SFRP1_shape"
+       class="shape"
+       cx="1856.0"
+       cy="246.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="SFRP1_text"
+       x="1856"
+       y="249"
+       text-anchor="middle">SFRP1</text>
+  </g>
+  <g
+     id="SFRP1gene"
+     class="node node_node_style">
+    <ellipse
+       id="SFRP1gene_shape"
+       class="shape"
+       cx="1856.0"
+       cy="572.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="SFRP1gene_text"
+       x="1856"
+       y="575"
+       text-anchor="middle">SFRP1gene</text>
+  </g>
+  <g
+     id="Caspase37"
+     class="node node_node_style_4">
+    <rect
+       id="Caspase37_shape"
+       class="shape"
+       width="80"
+       height="30"
+       x="1010"
+       y="778" />
+    <text
+       id="Caspase37_text"
+       x="1050"
+       y="796"
+       text-anchor="middle">Caspase37</text>
+  </g>
+  <g
+     id="betacatenin"
+     class="node node_node_style_2">
+    <ellipse
+       id="betacatenin_shape"
+       class="shape"
+       cx="1641.0"
+       cy="591.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="betacatenin_text"
+       x="1641"
+       y="594"
+       text-anchor="middle">betacatenin</text>
+  </g>
+  <g
+     id="betaTrCP"
+     class="node node_node_style">
+    <ellipse
+       id="betaTrCP_shape"
+       class="shape"
+       cx="1804.0"
+       cy="505.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="betaTrCP_text"
+       x="1804"
+       y="508"
+       text-anchor="middle">betaTrCP</text>
+  </g>
+  <g
+     id="MMP"
+     class="node node_node_style">
+    <ellipse
+       id="MMP_shape"
+       class="shape"
+       cx="1637.0"
+       cy="141.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="MMP_text"
+       x="1637"
+       y="144"
+       text-anchor="middle">MMP</text>
+  </g>
+  <g
+     id="Egr1"
+     class="node node_node_style">
+    <ellipse
+       id="Egr1_shape"
+       class="shape"
+       cx="1590.0"
+       cy="537.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="Egr1_text"
+       x="1590"
+       y="540"
+       text-anchor="middle">Egr1</text>
+  </g>
+  <g
+     id="LEF"
+     class="node node_node_style">
+    <ellipse
+       id="LEF_shape"
+       class="shape"
+       cx="1639.0"
+       cy="321.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="LEF_text"
+       x="1639"
+       y="324"
+       text-anchor="middle">LEF</text>
+  </g>
+  <g
+     id="Prosurvival"
+     class="node node_node_style_5">
+    <rect
+       id="Prosurvival_shape"
+       class="shape"
+       width="80"
+       height="30"
+       x="1731"
+       y="828" />
+    <text
+       id="Prosurvival_text"
+       x="1771"
+       y="846"
+       text-anchor="middle">Prosurvival</text>
+  </g>
+  <g
+     id="cMYC"
+     class="node node_node_style">
+    <ellipse
+       id="cMYC_shape"
+       class="shape"
+       cx="1803.0"
+       cy="697.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="cMYC_text"
+       x="1803"
+       y="700"
+       text-anchor="middle">cMYC</text>
+  </g>
+  <g
+     id="TCF"
+     class="node node_node_style">
+    <ellipse
+       id="TCF_shape"
+       class="shape"
+       cx="1777.0"
+       cy="624.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="TCF_text"
+       x="1777"
+       y="627"
+       text-anchor="middle">TCF</text>
+  </g>
+  <g
+     id="NLK"
+     class="node node_node_style">
+    <ellipse
+       id="NLK_shape"
+       class="shape"
+       cx="1438.0"
+       cy="632.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="NLK_text"
+       x="1438"
+       y="635"
+       text-anchor="middle">NLK</text>
+  </g>
+  <g
+     id="DKK1gene"
+     class="node node_node_style">
+    <ellipse
+       id="DKK1gene_shape"
+       class="shape"
+       cx="1618.0"
+       cy="696.0"
+       rx="40.0"
+       ry="15.0" />
+    <text
+       id="DKK1gene_text"
+       x="1618"
+       y="699"
+       text-anchor="middle">DKK1gene</text>
+  </g>
+  <g
+     id="CCND1"
+     class="node node_node_style_4">
+    <rect
+       id="CCND1_shape"
+       class="shape"
+       width="80"
+       height="30"
+       x="1696"
+       y="750" />
+    <text
+       id="CCND1_text"
+       x="1736"
+       y="768"
+       text-anchor="middle">CCND1</text>
+  </g>
+</svg>
