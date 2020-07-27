@@ -3,16 +3,16 @@
 #SBATCH --job-name=SYNTHETIC
 #SBATCH --output=SYNTHETIC_%A_%a.out
 #SBATCH --error=SYNTHETIC_%A_%a.err
-#SBATCH --array=0-2
+#SBATCH --array=1-3
 #SBATCH --time=05:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
 
-num_cores=(6 10 15)
+num_cores=(6 10 15 30)
 num_core=${num_cores[$SLURM_ARRAY_TASK_ID]}
 
-num_in=10 
-num_out=10 
+num_in=3
+num_out=10
 max_in_connections=3
 num_input_nodes=${num_in}
 num_output_nodes=${num_out}

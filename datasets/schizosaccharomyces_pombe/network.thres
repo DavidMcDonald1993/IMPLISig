@@ -1,0 +1,9 @@
+SK<--SK 
+Cdc2/13<-+Cdc2/13 -Ste9 -Rum1 -Slp1   
+Ste9<--SK -Cdc2/13 -Cdc2/13* +PP   
+Rum1<--Cdc2/13 -SK -Cdc2/13* +PP 
+Slp1<--Slp1 +Cdc2/13*
+Cdc2/13*<--Ste9 -Rum1 +Cdc25 -Wee1 -Slp1
+Wee1<--Cdc2/13 +PP  
+Cdc25<-Cdc2/13 -PP 
+PP<-Slp1 -PP 

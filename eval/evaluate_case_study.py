@@ -5,9 +5,7 @@ import numpy as np
 import pandas as pd 
 import networkx as nx 
 
-
 from sklearn.metrics import roc_auc_score, average_precision_score
-
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -29,17 +27,28 @@ def main():
         os.makedirs(output_dir)
 
     micro_feature_names = ("$k$", 
-        "$k_{{\\text{{in}}}}$", "$k_{{\\text{{out}}}}$",
-        "cn", "cc")
+        "$k_{{\\text{{in}}}}$",
+         "$k_{{\\text{{out}}}}$",
+        "bc", 
+        "cc",
+        "cn")
     # implisig_variations = ("pos_neg", "pos", "neg", "all")
-    implisig_variations = ("pos_neg", )
+    implisig_variations = ("pos_neg", 
+        # "neg_pos"
+        )
 
     metrics = (
         ("AUROC", roc_auc_score),
         ("AP", average_precision_score)
     )
 
-    networks = ("gastric", "egfr", "tcim")
+    networks = (
+        "gastric", 
+        "egfr", 
+        "tcim", 
+        # "bladder", 
+        # "liver"
+        )
 
     for network in networks:
 
@@ -58,7 +67,8 @@ def main():
         graph.remove_edges_from(nx.selfloop_edges(graph))
         core_numbers = nx.core_number(graph)
 
-        p_val_filename = os.path.join("expressions", 
+        p_val_filename = os.path.join(
+            "expressions", 
             network,
             "p_values.csv")
         print ("reading p-values from", p_val_filename)
@@ -76,15 +86,18 @@ def main():
         degrees_of_core = [degrees[n] for n in target_nodes]
         in_degrees_of_core = [graph.in_degree(n) for n in target_nodes]
         out_degrees_of_core = [graph.out_degree(n) for n in target_nodes]
-        core_numbers_of_core = [core_numbers[n] for n in target_nodes]
         bcs_of_core = [bcs[n] for n in target_nodes]
+        ccs_of_core = [ccs[n] for n in target_nodes]
+        core_numbers_of_core = [core_numbers[n] for n in target_nodes]
+
 
         micro_feature_ranks = [
             degrees_of_core,
             in_degrees_of_core,
             out_degrees_of_core,
-            core_numbers_of_core,
             bcs_of_core,
+            ccs_of_core,
+            core_numbers_of_core,
         ]
 
         implisig_ranks = []

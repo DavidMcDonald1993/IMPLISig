@@ -1,0 +1,10 @@
+Fgf8_g, Fgf8_p & !Emx2_p & Sp8_p
+Emx2_g, !Fgf8_p & !Pax6_p & Coup_p & !Sp8_p
+Pax6_g, !Emx2_p & !Coup_p & Sp8_p
+Coup_g, !Fgf8_p & !Sp8_p
+Sp8_g, Fgf8_p & !Emx2_p
+Fgf8_p, Fgf8_g
+Emx2_p, Emx2_g 
+Pax6_p, Pax6_g 
+Coup_p, Coup_g 
+Sp8_p, Sp8_g 

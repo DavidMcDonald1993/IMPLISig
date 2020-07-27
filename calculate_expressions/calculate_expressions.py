@@ -69,7 +69,7 @@ def main():
         create_using=nx.DiGraph())
 
     output_nodes = args.output_nodes
-    if output_nodes[0] == "output": # all nodes with no outgoing edges
+    if output_nodes[0] == "all": # all nodes with no outgoing edges
         output_nodes = [n for n in g if g.out_degree(n) == 0]
 
     for gene in output_nodes:

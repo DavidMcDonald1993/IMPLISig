@@ -1,0 +1,11 @@
+Cln3<--Cln3 
+MBF<-Cln3 -Clb1_2   
+SBF<-Cln3 -Clb1_2  
+Cln1_2<--Cln1_2 +SBF  
+Cdh1<--Cln1_2 -Clb5_6 +Cdc20_Cdc14 -Clb1_2 
+Swi5<-Cdc20_Cdc14 -Clb1_2 +Mcm1_SFF -Swi5   
+Cdc20_Cdc14<--Cdc20_Cdc14 +Clb1_2 +Mcm1_SFF  
+Clb5_6<--Sic1 +MBF -Cdc20_Cdc14    
+Sic1<--Cln1_2 -Clb1_2 +Swi5 +Cdc20_Cdc14 -Clb5_6   
+Clb1_2<--Cdh1 +Mcm1_SFF -Sic1 +Clb5_6 -Cdc20_Cdc14  
+Mcm1_SFF<--Mcm1_SFF +Clb1_2 +Clb5_6    

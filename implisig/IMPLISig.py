@@ -23,7 +23,7 @@ def find_cycles(u, n, g, start, l=set(), mode="pos"):
 		or
 		w > 0 and mode=="pos"
 		or
-		 w < 0 and mode=="neg"}
+		w < 0 and mode=="neg"}
 
 	if n > 1:
 		neighbors = neighbors - l
@@ -43,11 +43,17 @@ def score_subgraph(g, groups):
 		for u, v, w in subgraph.edges(data="weight") 
 		if u != v])
 
-	# return k_in / len(subgraph) ** 2
+	# return k_in / len(unpack(subgraph)) ** 2
 	# k_self = len([(u, v) for 
 	# 	u, v, w in subgraph.edges(data="weight") 
 	# 	if u == v])
+	# if isinstance(groups, frozenset):
 	k_self = 0
+	# else:
+	# 	assert False
+	# 	k_self = len([(u, v) for 
+	# 		u, v, w in subgraph.edges(data="weight") 
+	# 		if u == v])
 
 	k_all = sum((len(set(g.neighbors(u)) - {u}) 
 		for u in subgraph))
@@ -96,53 +102,66 @@ def bottom_up_partition(g,
 	'''
 
 	g = nx.MultiDiGraph(g.copy())
-	num_edges = len(g.edges())
 	h = nx.DiGraph()
 
 	h.add_nodes_from( g.nodes() )
+	
+	# for u, _ in nx.selfloop_edges(g):
+	# 	h.add_edge(u, frozenset([u]))
+	# 	g = nx.relabel_nodes(g, mapping={u: frozenset([u])})
+
+	# g.remove_edges_from(list(nx.selfloop_edges(g)))
+
+	num_edges = len(g.edges())
 
 	# repeat until g has collapsed into a single node    
 	while len(g) > 1:
 		print ("number of nodes in g:", len(g),
 			"number of edges:", len(g.edges()))
 
+		max_subgraph_score = 0
+
 		###################################
 		s = 2
-		while s < max_loop_size :
+		while s < max_loop_size:
 			print ("scoring subgraphs of size", s)
-			subgraph_scores = {}
 
-			for n in g.nodes():
-				for mode in modes:
+			# subgraph_scores = {}
+
+			for mode in modes:
+
+				subgraph_scores = {}
+
+				for n in g.nodes():
 					for cycle in map(frozenset, 
 						find_cycles(n, s, g, start=n, mode=mode)):
 						if cycle in subgraph_scores:
-							assert np.allclose(subgraph_scores[cycle], 
-								score_function(g, cycle))
-							# assert False
+							# assert np.allclose(subgraph_scores[cycle], 
+							# 	score_function(g, cycle))
 							continue
 						subgraph_scores[cycle] = \
 							score_function(g, cycle)
 
+				if len(subgraph_scores) > 0:
+					
+					max_subgraph_score = max(subgraph_scores.values())
 
-			if len(subgraph_scores) > 0:
-				
-				max_subgraph_score = max(subgraph_scores.values())
-
-				if max_subgraph_score > 0:
-					print ("found positive scoring subgraph of size", 
-						s)
-					chosen_subgraphs = [k for k, v in subgraph_scores.items()
-						if v == max_subgraph_score]
-					break
-			s += 1
+					if max_subgraph_score > 0:
+						print ("found positive scoring subgraph of size", 
+							s, "with score", max_subgraph_score )
+						chosen_subgraphs = [k for k, v in subgraph_scores.items()
+							if v == max_subgraph_score]
+						break
+			if max_subgraph_score > 0:
+				break
+			else:
+				s += 1
 
 		if s == max_loop_size:
 			print ("failed to find any postive scoring subgraphs of size", 
 				max_loop_size)
 			chosen_subgraphs = [frozenset().union(g.nodes())]
 
-		
 		#####################################################
 		# subgraph_scores = {}
 		# for s in range(2, max_loop_size):
@@ -171,11 +190,10 @@ def bottom_up_partition(g,
 		# else:
 		# 	chosen_subgraphs = [frozenset().union(g.nodes())]
 
-
-
 		####################################################
 
-		overlaps = np.array([[len(s1.intersection(s2)) for s2 in chosen_subgraphs]
+		overlaps = np.array([[
+			len(s1.intersection(s2)) for s2 in chosen_subgraphs]
 			for s1 in chosen_subgraphs])
 
 		chosen_subgraphs = {frozenset.union(*[chosen_subgraphs[x]
@@ -197,7 +215,6 @@ def bottom_up_partition(g,
 
 		assert len(g.edges()) == num_edges, (len(g.edges), num_edges)
 
-
 	return h
 
 def decompose_all_sccs(g, 
@@ -209,8 +226,6 @@ def decompose_all_sccs(g,
 	'''
 	h = nx.DiGraph()
 	roots = []
-
-	orders = {}
 
 	for scc in nx.strongly_connected_components(g):
 		print ("processing SCC", scc)
@@ -256,13 +271,6 @@ def parse_args():
 	parser.add_argument("--output", dest="output", 
 		type=str, default=None,
 		help="Directory to save images/merge depths.")
-	# parser.add_argument("--score-function",
-	# 	dest="score_function", 
-	# 	type=str, default="density_pos", 
-	# 	choices=["density", "density_pos", 
-	# 		"module", "module_pos", "module_neg", "module_coh",
-	# 		"bc", "degree"],
-	# 	help="Scoring function.")
 	parser.add_argument("--modes", nargs="+",
 		default=("pos", "neg"))
 	parser.add_argument("--draw", action="store_true",
@@ -284,14 +292,6 @@ def main():
 	g = nx.read_weighted_edgelist(edgelist_file, 
 		create_using=nx.DiGraph(), 
 		delimiter="\t")
-
-	# mapping_file = args.mapping
-	# if mapping_file is not None:
-	# 	print ("relabeling nodes using", mapping_file)
-	# 	mapping = pd.read_csv(mapping_file, 
-	# 		index_col=0, header=None, dtype=str)[1].to_dict()
-	# 	mapping = {str(k): v for k, v in mapping.items()}
-	# 	g = nx.relabel_nodes(g, mapping=mapping)
 
 	g = g.subgraph(max(nx.strongly_connected_components(g), key=len)) # only process largest SCC
 
@@ -323,7 +323,6 @@ def main():
 	merge_depths = {node: \
 		nx.shortest_path_length(h, node, root) 
 		for node in core }
-	# merge_depths = orders
 
 	merge_depth_filename = os.path.join(output_dir,
 		"merge_depths.csv")
@@ -338,25 +337,25 @@ def main():
 	print (genes_with_max_merge_depth)
 	print ()
 
-	# target input genes
-	in_component = [
-		n for n in g
-		if n not in core
-		and nx.has_path(g, n, core[0])
-	]
+	# # target input genes
+	# in_component = [
+	# 	n for n in g
+	# 	if n not in core
+	# 	and nx.has_path(g, n, core[0])
+	# ]
 
-	scores = {u: 
-		np.mean([1. / nx.shortest_path_length(g, u, c) 
-			for c in genes_with_max_merge_depth])
-		for u in in_component
-	}
+	# scores = {u: 
+	# 	np.mean([1. / nx.shortest_path_length(g, u, c) 
+	# 		for c in genes_with_max_merge_depth])
+	# 	for u in in_component
+	# }
 
-	score_filename = os.path.join(output_dir, 
-		"in_component_scores.csv")
-	print ("saving scores to", score_filename)
-	pd.DataFrame.from_dict(scores, 
-		orient="index").to_csv(score_filename)
-	print ()
+	# score_filename = os.path.join(output_dir, 
+	# 	"in_component_scores.csv")
+	# print ("saving scores to", score_filename)
+	# pd.DataFrame.from_dict(scores, 
+	# 	orient="index").to_csv(score_filename)
+	# print ()
 
 
 	### DRAWING
@@ -397,8 +396,8 @@ def main():
 			node_height_map.update({n: height})
 
 			for no, child in enumerate(children):
-				# make metanode
-				node = "metanode_{}".format(no)
+				# make super node
+				node = "supernode_{}".format(no)
 				image_filename = os.path.join(output_dir, 
 					"subgraph_{}.png".format(node_id_map[child]))
 				assert os.path.exists(image_filename)

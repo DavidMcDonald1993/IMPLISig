@@ -1,0 +1,57 @@
+A1R, Adenosine    
+A2AR, Adenosine
+AC1, !Gbetagamma & !Galphaz & (Galphas|Calmodulin)   
+AC2, !Galphai & (Gbetagamma|Galphas|PKC)
+AC5, !Galphai & !Galphaz & !Ca2plus & (PKC|Galphas)
+PP2B, Calmodulin        
+Ca2plus, NMDAR|NtypeCaCh|PQtypeCaCh
+Calmodulin, Ca2plus
+CaMKI, !PP2A & CaMKK     
+CaMKII, Calmodulin|NMDAR 
+CaMKIV, !PP2A & !PP2B & (Calmodulin|CaMKK)    
+CaMKK, !PKA & Calmodulin           
+cAMP, AC1|AC2|AC5     
+CBP, !SAM68 & PKA         
+cJun, !GSK3 & CBP         
+CREB, !PP2A & !PP2B & !CREM & (GSK3|PKA|cJun|RSK|CaMKII|CaMKIV|CaMKI) 
+CREM, CaMKIV   
+D1R, !PKA & Dopamine         
+D2R, Dopamine 
+D3R, Dopamine  
+DAG, PLCbeta|PLCgamma
+DOR, Enkephalin          
+5HT1AR, Serotonin          
+5HT2AR, Serotonin   
+5HT4R, Serotonin        
+GABABR, !GABA      
+Galphai, A1R|D1R|D2R|D3R|M4R|M2R|mGluR7|DOR|KOR|MOR|NOR|5HT1AR
+Galphas, A2AR|D1R|5HT1AR|5HT4R       
+Galphaz, D2R|5HT1AR            
+Gbetagamma, A1R|A2AR|M1R|M4R|M2R|D1R|D2R|D3R|GABABR|mGluR1|mGluR7|DOR|KOR|MOR|NOR|5HT1AR|5HT2AR|5HT4R 
+Grb2, D3R   
+GSK3, !ILK & !AKT & !PKC & PP2A     
+ILK, PIP3  
+KOR, Enkephalin   
+M1R, Ach 
+M2R, Ach         
+M4R, Ach   
+mGluR1, PKC|Glutamate       
+mGluR7, !Calmodulin & (PKC|PKA|Glutamate)                 
+MOR, Enkephalin     
+NMDAR, !PKC & !PP2A & !Calmodulin & !PP2B & (PKA|Glutamate) 
+NOR, Enkephalin    
+NtypeCaCh, !Gbetagamma & (PKC|CaMKII)
+PDK1, PIP3          
+PI3K, Gbetagamma   
+PIP2, !PI3K & !PLCbeta & !PLCgamma
+PIP3, PI3K          
+PKA, cAMP      
+AKT, !PP2A & (RasGAP|ILK|PIP3|PDK1|PIP2|CaMKK)            
+PKC, PDK1|PIP3|DAG|Ca2plus
+PLCbeta, !PKA & !PKC & (Gbetagamma|Calmodulin)
+PLCgamma, !PKA & NMDAR
+PP2A, !CaMKII    
+PQtypeCaCh, !PKA & Gbetagamma 
+RasGAP, Gbetagamma     
+RSK, PDK1        
+SAM68, Grb2              

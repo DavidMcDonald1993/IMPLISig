@@ -4,7 +4,7 @@ Clb1_2	Swi5	-1
 Clb1_2	Cdc20_Cdc14	1
 Clb1_2	Sic1	-1
 Clb1_2	MBF	-1
-Clb1_2	Mcm_SFF	1
+Clb1_2	Mcm1_SFF	1
 Clb1_2	Cdh1	-1
 Cln3	SBF	1
 Cln3	MBF	1
@@ -20,7 +20,7 @@ Cdc20_Cdc14	Cdh1	1
 Cdc20_Cdc14	Clb1_2	-1
 Clb5_6	Clb1_2	1
 Clb5_6	Sic1	-1
-Clb5_6	Mcm_SFF	1
+Clb5_6	Mcm1_SFF	1
 Clb5_6	Cdh1	-1
 Sic1	Clb1_2	-1
 Sic1	Clb5_6	-1

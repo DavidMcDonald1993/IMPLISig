@@ -8,8 +8,8 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
 
-grns=(saccharomyces_cerevisiae_cell_cycle schizosaccharomyces_pombe mouse_myeloid_development mammalian_cortical_development arabidopsis_thaliana_development)
-modes=("pos neg" "pos" "neg" "all")
+grns=(mouse_myeloid_development schizosaccharomyces_pombe saccharomyces_cerevisiae_cell_cycle mammalian_cortical_development arabidopsis_thaliana_development)
+modes=("pos neg" "neg pos" "pos" "neg")
 
 num_grns=${#grns[@]}
 num_modes=${#modes[@]}

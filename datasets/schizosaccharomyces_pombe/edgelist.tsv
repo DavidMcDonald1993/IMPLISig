@@ -1,7 +1,7 @@
-Sip1	PP	1
-Sip1	Cdc2/13	-1
-Sip1	Cdc2/13*	-1
-Sip1	Sip1	-1
+Slp1	PP	1
+Slp1	Cdc2/13	-1
+Slp1	Cdc2/13*	-1
+Slp1	Slp1	-1
 Wee1	Cdc2/13*	-1
 Cdc25	Cdc2/13*	1
 PP	Wee1	1
@@ -21,6 +21,6 @@ SK	Rum1	-1
 SK	SK	-1
 Ste9	Cdc2/13*	-1
 Ste9	Cdc2/13	-1
-Cdc2/13*	Sip1	1
+Cdc2/13*	Slp1	1
 Cdc2/13*	Rum1	-1
 Cdc2/13*	Ste9	-1

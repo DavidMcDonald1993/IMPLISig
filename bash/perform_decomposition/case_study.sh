@@ -3,25 +3,26 @@
 #SBATCH --job-name=CASESTUDY
 #SBATCH --output=CASESTUDY_%A_%a.out
 #SBATCH --error=CASESTUDY_%A_%a.err
-#SBATCH --array=0-11
+#SBATCH --array=0-7
 #SBATCH --time=05:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
 
-grns=(gastric egfr tcim)
-modes=("pos neg" "pos" "neg" "all")
+# nets=(gastric egfr tcim)
+nets=(bladder liver)
+modes=("pos neg" "neg pos" "pos" "neg")
 
-num_grns=${#grns[@]}
+num_nets=${#nets[@]}
 num_modes=${#modes[@]}
 
-grn_id=$((SLURM_ARRAY_TASK_ID / num_modes % num_grns))
+net_id=$((SLURM_ARRAY_TASK_ID / num_modes % num_nets))
 mode_id=$((SLURM_ARRAY_TASK_ID % num_modes))
 
-grn=${grns[${grn_id}]}
+net=${nets[${net_id}]}
 mode=${modes[${mode_id}]}
 
-edgelist=datasets/${grn}/edgelist.tsv 
-output=implisig_output/${grn}
+edgelist=datasets/${net}/edgelist.tsv 
+output=implisig_output/${net}
 modes=mode
 max_loop_size=12
 

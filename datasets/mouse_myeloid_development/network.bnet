@@ -1,0 +1,11 @@
+GATA_2, GATA_2 & !(GATA_1 & FOG_1) & !PU1 
+GATA_1, (GATA_1 | GATA_2 | Fli_1) & !PU1 
+FOG_1, GATA_1 
+EKLF, GATA_1 & !Fli_1 
+Fli_1, GATA_1 & !EKLF 
+SCL, GATA_1 & !PU1 
+CEBPA,  CEBPA & !(GATA_1 & FOG_1 & SCL) 
+PU1, (CEBPA | PU1) & !(GATA_1 | GATA_2) 
+cJun, PU1 & !Gfi_1 
+EgrNab, (PU1 & cJun) & !Gfi_1 
+Gfi_1, CEBPA & !EgrNab 

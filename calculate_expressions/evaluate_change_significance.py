@@ -209,6 +209,18 @@ def main():
             }
         anti_cancer_outputs = {"CellCycleArrest", "Apoptosis"}
         one_tailed = True
+    elif "liver" in directory:
+        pro_cancer_outputs = {"BAD", "Myc", "CyclinD1",
+            "MCL_1"}
+        anti_cancer_outputs = {"BIM", "p27Kip1"}
+        one_tailed = True
+    elif "bladder" in directory:
+        pro_cancer_outputs = {"Proliferation", }
+        anti_cancer_outputs = {
+            "Apoptosis_b1", 
+            "Apoptosis_b2",
+            "Growth_Arrest", }
+        one_tailed = True
     else:
         assert "synthetic" in directory
         pro_cancer_outputs = set(dfs.keys())
