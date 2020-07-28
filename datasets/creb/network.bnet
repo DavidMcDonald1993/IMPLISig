@@ -54,4 +54,11 @@ PP2A, !CaMKII
 PQtypeCaCh, !PKA & Gbetagamma 
 RasGAP, Gbetagamma     
 RSK, PDK1        
-SAM68, Grb2              
+SAM68, Grb2           
+Adenosine, Adenosine
+Serotonin, Serotonin
+Dopamine, Dopamine
+Ach, Ach
+Enkephalin, Enkephalin
+GABA, GABA   
+Glutamate, Glutamate
