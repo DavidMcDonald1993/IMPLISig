@@ -1,0 +1,6 @@
+BAX	CytochromeC	1.0
+ITCH	CFLAR	-1.0
+CFLAR	Caspase8	-1.0
+CytochromeC	Caspase9	1.0
+BCL2	CytochromeC	-1.0
+BAD	BCL2	-1.0

@@ -3,23 +3,23 @@
 #SBATCH --job-name=EXPCASESTUDY
 #SBATCH --output=EXPCASESTUDY_%A_%a.out
 #SBATCH --error=EXPCASESTUDY_%A_%a.err
-#SBATCH --array=3-4
+#SBATCH --array=5
 #SBATCH --time=05:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
 
-all_datasets=(egfr gastric tcim bladder liver)
+all_datasets=(egfr gastric tcim bladder liver creb)
 all_output_nodes=("elk1 creb ap1 cmyc p70s6_2 hsp27 pro_apoptotic" \
     "Caspase8 Caspase9 FOXO RSK TCF cMYC" \
     "Apoptosis CellCycleArrest Metastasis" \
     "Proliferation Apoptosis_b1 Apoptosis_b2 Growth_Arrest" \
     "BAD Myc CyclinD1 MCL_1 BIM p27Kip1"
-    )
-all_control_modification=("erbb11" "" "" "" "")
+    "all")
+all_control_modifications=("erbb11" "" "" "" "" "")
 
 dataset=${all_datasets[$SLURM_ARRAY_TASK_ID]}
 output_nodes=${all_output_nodes[$SLURM_ARRAY_TASK_ID]}
-control_modification=${all_control_modification[$SLURM_ARRAY_TASK_ID]}
+control_modification=${all_control_modifications[$SLURM_ARRAY_TASK_ID]}
 
 output_dir=expressions/${dataset}
 

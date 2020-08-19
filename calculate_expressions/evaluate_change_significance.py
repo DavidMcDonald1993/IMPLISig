@@ -221,6 +221,10 @@ def main():
             "Apoptosis_b2",
             "Growth_Arrest", }
         one_tailed = True
+    elif "creb" in directory:
+        pro_cancer_outputs = {"CREB"}
+        anti_cancer_outputs = {}
+        one_tailed = False
     else:
         assert "synthetic" in directory
         pro_cancer_outputs = set(dfs.keys())

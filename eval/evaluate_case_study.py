@@ -28,7 +28,7 @@ def main():
 
     micro_feature_names = ("$k$", 
         "$k_{{\\text{{in}}}}$",
-         "$k_{{\\text{{out}}}}$",
+        "$k_{{\\text{{out}}}}$",
         "bc", 
         "cc",
         "cn")
@@ -43,11 +43,12 @@ def main():
     )
 
     networks = (
-        "gastric", 
-        "egfr", 
-        "tcim", 
+        # "gastric", 
+        # "egfr", 
+        # "tcim", 
         # "bladder", 
         # "liver"
+        "creb",
         )
 
     for network in networks:

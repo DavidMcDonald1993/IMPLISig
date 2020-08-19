@@ -10,6 +10,12 @@ import pandas as pd
 
 from PyBoolNet import StateTransitionGraphs as STGs
 
+def rotate_cyclic_attractor(attractor):
+	assert len(attractor) == len(set(attractor))
+	m = min(attractor)
+	i = attractor.index(m)
+	return attractor[i:] + attractor[:i]
+
 def select_states(primes, num_state_samples=10000, seed=0):
 
 	n = len(primes)
@@ -35,7 +41,11 @@ def select_states(primes, num_state_samples=10000, seed=0):
 
 	return states
 
-def build_STG_and_determine_attractors(primes, states):
+def build_STG_and_determine_attractors(
+	primes, 
+	states, 
+	return_stg=False):
+	print ("building partial STG to determine attractors for given initial conditions")
 
 	# assume synchronous update scheme
 
@@ -70,7 +80,10 @@ def build_STG_and_determine_attractors(primes, states):
 		attractor = visited[idx:]
 		attractors.append(attractor)
 
-	return attractors
+	if return_stg:
+		return stg, attractors
+	else:
+		return attractors
 
 def compute_average_activation(primes, genes, attractors):
 

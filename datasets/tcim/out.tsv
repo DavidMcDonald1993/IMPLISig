@@ -1,0 +1,11 @@
+SMAD	ERK	1.0
+SMAD	Invasion	1.0
+SMAD	p21	1.0
+EMT	Migration	1.0
+VIM	Migration	1.0
+ERK	Apoptosis	-1.0
+ERK	Migration	1.0
+ERK	p21	-1.0
+Invasion	Migration	1.0
+p21	CellCycleArrest	1.0
+Migration	Metastasis	1.0

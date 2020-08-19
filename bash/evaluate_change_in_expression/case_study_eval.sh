@@ -8,7 +8,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
 
-datasets=(gastric egfr tcim bladder liver)
+datasets=(gastric egfr tcim bladder liver creb)
 
 dataset=${datasets[$SLURM_ARRAY_TASK_ID]}
 

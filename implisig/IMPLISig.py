@@ -9,6 +9,8 @@ from networkx.drawing.nx_agraph import write_dot, graphviz_layout, to_agraph
 
 import glob
 
+import pickle as pkl
+
 def find_cycles(u, n, g, start, l=set(), mode="pos"):   
 	
 	if n==0:
@@ -17,13 +19,18 @@ def find_cycles(u, n, g, start, l=set(), mode="pos"):
 	
 	l = l.union( {u} )
 
+	if isinstance(g, nx.MultiGraph):
+		edge_iter = g.edges
+	else:
+		edge_iter = g.out_edges
+
 	neighbors = {v 
-		for _,  v, w in g.out_edges(u, data="weight")
-		if mode=="all"
-		or
-		w > 0 and mode=="pos"
-		or
-		w < 0 and mode=="neg"}
+		for _,  v, w in edge_iter(u, data="weight")
+			if mode=="all"
+			or
+			w > 0 and mode=="pos"
+			or
+			w < 0 and mode=="neg"}
 
 	if n > 1:
 		neighbors = neighbors - l
@@ -43,17 +50,10 @@ def score_subgraph(g, groups):
 		for u, v, w in subgraph.edges(data="weight") 
 		if u != v])
 
-	# return k_in / len(unpack(subgraph)) ** 2
 	# k_self = len([(u, v) for 
 	# 	u, v, w in subgraph.edges(data="weight") 
 	# 	if u == v])
-	# if isinstance(groups, frozenset):
 	k_self = 0
-	# else:
-	# 	assert False
-	# 	k_self = len([(u, v) for 
-	# 		u, v, w in subgraph.edges(data="weight") 
-	# 		if u == v])
 
 	k_all = sum((len(set(g.neighbors(u)) - {u}) 
 		for u in subgraph))
@@ -81,10 +81,8 @@ def collapse_subgraph(g, subgraph):
 		else:
 			
 			# undirected graph
-			assert False 
 			for _, v, w in g.edges(n, data="weight"):
 				if v in subgraph:
-					# v = subgraph
 					continue
 				new_edges.append(
 					(subgraph, v, {"weight": w}))
@@ -94,18 +92,21 @@ def collapse_subgraph(g, subgraph):
 
 def bottom_up_partition(g, 
 	score_function=score_subgraph,
+	min_loop_size=2,
 	max_loop_size=12,
-	modes=("pos", "neg")):
-
+	modes=("pos", "neg"),
+	undirected=False):
 	'''
-	perform partition in bottom-up manner
+	perform decomposition in bottom-up manner
 	'''
-
-	g = nx.MultiDiGraph(g.copy())
 	h = nx.DiGraph()
-
 	h.add_nodes_from( g.nodes() )
-	
+
+	if undirected:
+		g = nx.MultiGraph( g.copy() )
+	else:
+		g = nx.MultiDiGraph( g.copy() )
+
 	# for u, _ in nx.selfloop_edges(g):
 	# 	h.add_edge(u, frozenset([u]))
 	# 	g = nx.relabel_nodes(g, mapping={u: frozenset([u])})
@@ -122,7 +123,7 @@ def bottom_up_partition(g,
 		max_subgraph_score = 0
 
 		###################################
-		s = 2
+		s = min_loop_size
 		while s < max_loop_size:
 			print ("scoring subgraphs of size", s)
 
@@ -136,8 +137,6 @@ def bottom_up_partition(g,
 					for cycle in map(frozenset, 
 						find_cycles(n, s, g, start=n, mode=mode)):
 						if cycle in subgraph_scores:
-							# assert np.allclose(subgraph_scores[cycle], 
-							# 	score_function(g, cycle))
 							continue
 						subgraph_scores[cycle] = \
 							score_function(g, cycle)
@@ -152,6 +151,7 @@ def bottom_up_partition(g,
 						chosen_subgraphs = [k for k, v in subgraph_scores.items()
 							if v == max_subgraph_score]
 						break
+		
 			if max_subgraph_score > 0:
 				break
 			else:
@@ -213,36 +213,48 @@ def bottom_up_partition(g,
 			for n in chosen_subgraph:
 				h.add_edge(n, chosen_subgraph)
 
-		assert len(g.edges()) == num_edges, (len(g.edges), num_edges)
+		# assert len(g.edges()) == num_edges, (len(g.edges), num_edges)
 
 	return h
 
 def decompose_all_sccs(g, 
 	score_function=score_subgraph,
+	min_loop_size=2,
 	max_loop_size=12,
-	modes=("pos", "neg")):
+	modes=("pos", "neg"),
+	undirected=False):
 	'''
 	run decomposition on each SCC in g
 	'''
 	h = nx.DiGraph()
 	roots = []
 
-	for scc in nx.strongly_connected_components(g):
-		print ("processing SCC", scc)
-		scc = g.subgraph(scc)
-		scc_tree = bottom_up_partition(scc, 
+	if undirected:
+		component_iter = nx.connected_components(g.to_undirected())
+	else:
+		component_iter = nx.strongly_connected_components(g)
+
+	for cc in component_iter:
+		print ("processing CC", cc)
+		cc = g.subgraph(cc)
+		cc_tree = bottom_up_partition(cc, 
 			score_function=score_function,
+			min_loop_size=min_loop_size,
 			max_loop_size=max_loop_size,
-			modes=modes)
-		degrees = dict(scc_tree.out_degree())
+			modes=modes,
+			undirected=undirected)
+		
+		degrees = dict(cc_tree.out_degree())
 		root = min(degrees, key=degrees.get)
 		roots.append(root)
-		h = nx.union(h, scc_tree)
+		h = nx.union(h, cc_tree)
 		print ()
 
-	# add final root to represent whole network
-	all_nodes = frozenset(g.nodes())
+	print (roots)
+
 	if len(roots) > 1:
+		# add final root to represent whole network
+		all_nodes = frozenset(roots)
 		for root in roots:
 			h.add_edge(root, all_nodes)
 
@@ -265,21 +277,36 @@ def parse_args():
 	parser.add_argument("--edgelist", 
 		dest="edgelist", type=str, default=None,
 		help="edgelist to load.")
-	# parser.add_argument("--mapping", 
-	# 	dest="mapping", type=str, default=None,
-	# 	help="mapping file of node ids to names.")
 	parser.add_argument("--output", dest="output", 
 		type=str, default=None,
 		help="Directory to save images/merge depths.")
 	parser.add_argument("--modes", nargs="+",
 		default=("pos", "neg"))
-	parser.add_argument("--draw", action="store_true",
-		help="Flag to specify to plot or not.")
+	# parser.add_argument("--draw", action="store_true",
+		# help="Flag to specify to plot or not.")
+	parser.add_argument("--undirected", action="store_true",
+		help="Decompose undirected network.")
 
+	parser.add_argument("--min_loop_size", type=int,
+		default=2)
 	parser.add_argument("--max_loop_size", type=int,
 		default=12)
 
 	return parser.parse_args()
+
+def load_graph(filename):
+	if filename.endswith(".gml"):
+		g = nx.read_gml(filename)
+	elif filename.endswith(".pkl"):
+		with open(filename, "rb") as f:
+			g = pkl.load(f)
+	elif filename.endswith(".tsv"):
+		g = nx.read_weighted_edgelist(filename, 
+			create_using=nx.DiGraph(), 
+			delimiter="\t")
+	else:
+		raise Exception
+	return g
 
 def main():
 
@@ -288,12 +315,14 @@ def main():
 	edgelist_file = args.edgelist
 	
 	print ("decomposing", edgelist_file)
+	g = load_graph(edgelist_file)
+	# g = nx.read_weighted_edgelist(edgelist_file, 
+	# 	create_using=nx.DiGraph(), 
+	# 	delimiter="\t")
 
-	g = nx.read_weighted_edgelist(edgelist_file, 
-		create_using=nx.DiGraph(), 
-		delimiter="\t")
-
-	g = g.subgraph(max(nx.strongly_connected_components(g), key=len)) # only process largest SCC
+	if len(g) == 0:
+		print ("Graph is empty, nothing to decompose")
+		return
 
 	print ("found graph with", len(g), 
 		"nodes and", len(g.edges()), "edges")
@@ -303,165 +332,150 @@ def main():
 			for u, v, w in g.edges(data="weight")})
 
 	output_dir = args.output
-	output_dir = os.path.join(output_dir, "_".join(args.modes))
+	output_dir = os.path.join(output_dir, 
+		"_".join(args.modes))
 	if not os.path.exists(output_dir):
 		os.makedirs(output_dir, exist_ok=True)
 
 	h = decompose_all_sccs(g, 
+		min_loop_size=args.min_loop_size,
 		max_loop_size=args.max_loop_size,
-		modes=args.modes)
-	
+		modes=args.modes,
+		undirected=args.undirected)
+
 	print ("determining merge depths")
 
 	out_degrees = dict(h.out_degree())
 	root = min(out_degrees, key=out_degrees.get)
 
-	core = list(
-		max(nx.strongly_connected_components(g),
-		key=len))
+	assert len(set(unpack(root))) == len(g)
+	assert h.out_degree(root) == 0
 
 	merge_depths = {node: \
 		nx.shortest_path_length(h, node, root) 
-		for node in core }
+		for node in g }
 
 	merge_depth_filename = os.path.join(output_dir,
 		"merge_depths.csv")
 	print ("saving merge depths to", merge_depth_filename)
-	pd.Series(merge_depths).to_csv(merge_depth_filename)
+	merge_depths = pd.Series(merge_depths, name="merge_depth")
+	merge_depths.to_csv(merge_depth_filename)
 
-	max_merge_depth = max(merge_depths.values())
-	genes_with_max_merge_depth = [k 
-		for k, v in merge_depths.items()
-		if v == max_merge_depth]
-	print ("genes with maximum merge depth")
-	print (genes_with_max_merge_depth)
-	print ()
+	# h = nx.relabel_nodes(h,
+	# 	mapping={n: frozenset([n]) for n in h
+	# 		if isinstance(n, str)})
 
-	# # target input genes
-	# in_component = [
-	# 	n for n in g
-	# 	if n not in core
-	# 	and nx.has_path(g, n, core[0])
-	# ]
+	hierarchy_filename = os.path.join(output_dir, 
+		"hierarchy.pkl")
+	print ("writing hierarchy to", hierarchy_filename)
+	# nx.write_edgelist(h, hierarchy_filename, delimiter="\t",)
+	with open(hierarchy_filename, "wb") as f:
+		pkl.dump(h, f, pkl.HIGHEST_PROTOCOL)
 
-	# scores = {u: 
-	# 	np.mean([1. / nx.shortest_path_length(g, u, c) 
-	# 		for c in genes_with_max_merge_depth])
-	# 	for u in in_component
-	# }
+	# ### DRAWING
+	# if args.draw:
 
-	# score_filename = os.path.join(output_dir, 
-	# 	"in_component_scores.csv")
-	# print ("saving scores to", score_filename)
-	# pd.DataFrame.from_dict(scores, 
-	# 	orient="index").to_csv(score_filename)
-	# print ()
+	# 	draw_height = 2
 
+	# 	print ("DRAWING DECOMPOSITION AT HEIGHT",
+	# 		draw_height)
 
-	### DRAWING
-	if args.draw:
+	# 	h = h.reverse()
 
-		draw_height = 2
+	# 	node_id_map = {}
+	# 	node_height_map = {}
 
-		print ("DRAWING DECOMPOSITION AT HEIGHT",
-			draw_height)
+	# 	for i, n in enumerate(h.nodes()):
+	# 		if isinstance(n, frozenset):
+	# 			g_ = nx.MultiDiGraph(g.subgraph(unpack(n)))
+	# 		else:
+	# 			g_ = nx.MultiDiGraph(g.subgraph([n]))
+	# 			g_.remove_edges_from(list(nx.selfloop_edges(g_)))
 
-		h = h.reverse()
+	# 		nx.set_edge_attributes(g_, name="arrowhead",
+	# 			values={(u, v, w): ("normal" if w>0 else "tee") 
+	# 				for u, v, w in g_.edges(data="weight")})
 
-		node_id_map = {}
-		node_height_map = {}
+	# 		node_id_map.update({n: i})
 
-		for i, n in enumerate(h.nodes()):
-			if isinstance(n, frozenset):
-				g_ = nx.MultiDiGraph(g.subgraph(unpack(n)))
-			else:
-				g_ = nx.MultiDiGraph(g.subgraph([n]))
-				g_.remove_edges_from(list(nx.selfloop_edges(g_)))
-			nx.set_edge_attributes(g_, name="arrowhead",
-				values={(u, v, w): ("normal" if w>0 else "tee") 
-					for u, v, w in g_.edges(data="weight")})
+	# 		children = list(h.neighbors(n))
+	# 		if len(children) == 0:
+	# 			height = 0
+	# 		else:
+	# 			height = min([
+	# 				nx.shortest_path_length(h, n, el) for el in unpack(n)])
 
-			node_id_map.update({n: i})
-
-			children = list(h.neighbors(n))
-			if len(children) == 0:
-				height = 0
-			else:
-				height = max([nx.shortest_path_length(h, n, 
-					el) for el in unpack(n)])
-
-			if height > draw_height:
-				continue
+	# 		if height > draw_height:
+	# 			continue
 			
-			node_height_map.update({n: height})
+	# 		node_height_map.update({n: height})
 
-			for no, child in enumerate(children):
-				# make super node
-				node = "supernode_{}".format(no)
-				image_filename = os.path.join(output_dir, 
-					"subgraph_{}.png".format(node_id_map[child]))
-				assert os.path.exists(image_filename)
-				g_.add_node(node, label="", 
-					image=image_filename)
-				for n_ in unpack(child):
-					for u, _, w in g_.in_edges(n_, data="weight"):
-						if u == node:
-							continue
-						g_.add_edge(u, node, 
-						weight=w, 
-						arrowhead=("normal" if w>0 else "tee"))
-					for _, v, w in g_.out_edges(n_, data="weight"):
-						if v == node:
-							continue
-						g_.add_edge(node, v, 
-						weight=w,
-						arrowhead=("normal" if w>0 else "tee"))
-					g_.remove_node(n_)
+	# 		for no, child in enumerate(children):
+	# 			# make super node
+	# 			node = "supernode_{}".format(no)
+	# 			image_filename = os.path.join(output_dir, 
+	# 				"subgraph_{}.png".format(node_id_map[child]))
+	# 			assert os.path.exists(image_filename)
+	# 			g_.add_node(node, label="", 
+	# 				image=image_filename)
+	# 			for n_ in unpack(child):
+	# 				assert n_ in g_ , (n_, child, g_.nodes)
+	# 				for u, _, w in g_.in_edges(n_, data="weight"):
+	# 					if u == node:
+	# 						continue
+	# 					g_.add_edge(u, node, 
+	# 					weight=w, 
+	# 					arrowhead=("normal" if w>0 else "tee"))
+	# 				for _, v, w in g_.out_edges(n_, data="weight"):
+	# 					if v == node:
+	# 						continue
+	# 					g_.add_edge(node, v, 
+	# 					weight=w,
+	# 					arrowhead=("normal" if w>0 else "tee"))
+	# 				g_.remove_node(n_)
 				
-			plot_filename = os.path.join(output_dir,
-				"subgraph_{}.png".format(i))
-			g_.graph['edge'] = {'arrowsize': '.8', 
-				'splines': 'curved'}
-			g_.graph['graph'] = {'scale': '3'}
+	# 		plot_filename = os.path.join(output_dir,
+	# 			"subgraph_{}.png".format(i))
+	# 		g_.graph['edge'] = {'arrowsize': '.8', 
+	# 			'splines': 'curved'}
+	# 		g_.graph['graph'] = {'scale': '3'}
 
-			# nx.set_edge_attributes(g_, name="len", values=".1" )
+	# 		a = to_agraph(g_)
+	# 		a.layout('dot')   
+	# 		a.draw(plot_filename)
 
-			a = to_agraph(g_)
-			a.layout('fdp')   
-			a.draw(plot_filename)
-
-		h = h.reverse()
+	# 	h = h.reverse()
 		
-		# draw hierarchy
-		nx.set_node_attributes(h, name="image", 
-			values={n: 
-			os.path.join(output_dir, 
-			"subgraph_{}.png".format(i) )
-			for i, n in enumerate(h.nodes())})
-		nx.set_node_attributes(h, name="label", values="")
+	# 	# draw hierarchy
+	# 	nx.set_node_attributes(h, name="image", 
+	# 		values={n: 
+	# 		os.path.join(output_dir, 
+	# 		"subgraph_{}.png".format(i) )
+	# 		for i, n in enumerate(h.nodes())})
+	# 	nx.set_node_attributes(h, name="label", values="")
 
-		tree_plot_filename = os.path.join(output_dir, 
-			"scc_tree.png")
-		h.graph['edge'] = {'arrowsize': '.8', 'splines': 'curved'}
-		h.graph['graph'] = {'scale': '3'}
+	# 	tree_plot_filename = os.path.join(output_dir, 
+	# 		"scc_tree.png")
+	# 	h.graph['edge'] = {'arrowsize': '.8', 'splines': 'curved'}
+	# 	h.graph['graph'] = {'scale': '3'}
 
-		a = to_agraph(h)
-		a.layout('dot')   
-		a.draw(tree_plot_filename)
+	# 	a = to_agraph(h)
+	# 	a.layout('dot')   
+	# 	a.draw(tree_plot_filename)
 
-		print ("plotted", tree_plot_filename)
+	# 	print ("plotted", tree_plot_filename)
 
-		# cleanup of directory
-		print ("cleaning up directory")
-		nodes_to_remove = [node_id_map[n]
-			for n, h in node_height_map.items()
-			if h < draw_height]
-		# for f in glob.iglob(os.path.join(output_dir, 
-		# 	"subgraph_*.png")):
-		for f in (os.path.join(output_dir, 
-			"subgraph_{}.png".format(n) )
-			for n in nodes_to_remove):
-			os.remove(f)
+	# 	# cleanup of directory
+	# 	print ("cleaning up directory")
+	# 	nodes_to_remove = [node_id_map[n]
+	# 		for n, h in node_height_map.items()
+	# 		if h < draw_height]
+	# 	# for f in glob.iglob(os.path.join(output_dir, 
+	# 	# 	"subgraph_*.png")):
+	# 	for f in (os.path.join(output_dir, 
+	# 		"subgraph_{}.png".format(n) )
+	# 		for n in nodes_to_remove):
+	# 		os.remove(f)
 
 if __name__ == "__main__":
 	main()
